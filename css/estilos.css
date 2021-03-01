@@ -58,6 +58,9 @@ body{
     font-size: 35px;
     color: var(--text);
 }
+.menu  {
+    margin-top: 5%;
+}
 .menu .icon{
     font-size: 25px;
 }
@@ -82,5 +85,28 @@ body{
 .card img{
     width: 250px;
     height: 150px;
+}.header{
+    visibility: hidden;
+ }
+
+@media screen and (max-width: 768px){
+    .contenedor .contenido{
+        text-align: center;
+    }
+    .contenido .row{
+        padding-left: 15%;
+    }
+  .contenedor .sidebar{
+      visibility: hidden;
+      z-index: 1;
+  }
+    .contenedor .contenido{
+        grid-column: 1 / -1;
+    }
+    .header{
+        visibility: visible;
+        background-color: var(--primary);
+        width: 100%;
+    }
 }
 /* css sidebar  */
