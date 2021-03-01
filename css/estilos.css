@@ -99,6 +99,7 @@ body{
   .contenedor .sidebar{
       visibility: hidden;
       z-index: 1;
+      height: 100vh;
   }
     .contenedor .contenido{
         grid-column: 1 / -1;
@@ -107,6 +108,7 @@ body{
         visibility: visible;
         background-color: var(--primary);
         width: 100%;
+        margin-top: 0;
     }
 }
 /* css sidebar  */
