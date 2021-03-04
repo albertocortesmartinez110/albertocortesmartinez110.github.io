@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>datos conexion</h2>
+
+<p>
+
+define('DB_HOST','localhost');</br>
+define('DB_USUARIO','root');</br>
+define('DB_CONTRA','');</br>
+define('DB_NAME','supermercado');</br>
+define('DB_CHARSET','utf8');</br>
+
+</p>
+<h2>conectar</h2>
+<p>
+
+require('datosconexion.php');</br>
+class conectar{</br>
+
+    public static function conexion()</br>
+    {</br>
+        try {</br>
+            $conexion = new PDO('mysql:host=' . DB_HOST . ';port=3308; dbname=' . DB_NAME, DB_USUARIO, DB_CONTRA);</br>
+            $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</br>
+    $conexion->exec("SET CHARACTER SET UTF8");</br>
+    }catch (Exception $e){</br>
+
+    die("Error " .$e->getMessage().' en la fila :'.$e->getLine());</br>
+    }</br>
+    return $conexion;</br>
+    }</br>
+    }</br>
+</p>
+</body>
+</html>
