@@ -13,5 +13,10 @@ function cambiar_tamaño_height() {
     $("#header").click(function (){
 
         $(".sidebar").css('visibility','visible');
+        $(".cerrar").css('visibility', 'visible');
+    });
+    $("#cerrar").click(function (){
+        $(".sidebar").css('visibility', 'hidden');
+        $(".cerrar").css('visibility', 'hidden');
     });
 }

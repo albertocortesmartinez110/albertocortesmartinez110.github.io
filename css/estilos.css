@@ -34,12 +34,16 @@ body{
 .perfil{
     height: 50%;
     border-bottom: 1px var(--text) solid;
-}
+}.perfil .cerrar{
+    margin-top: -15px;
+    color: red;
+    margin-left: 90%;
+    visibility: hidden;
+ }
 .perfil figure{
     align-content: center;
     text-align: center;
     margin-top: 0;
-    height: 70%;
     margin-top: 5%;
 }
 .perfil img{
@@ -87,7 +91,8 @@ body{
     height: 150px;
 }.header{
     visibility: hidden;
- }
+}
+
 
 @media screen and (max-width: 768px){
     .contenedor .contenido{
@@ -105,10 +110,17 @@ body{
     .contenedor .contenido{
         grid-column: 1 / -1;
     }
+    .contenido >p{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .header{
         visibility: visible;
         background-color: var(--primary);
         width: 100%;
+        text-align: initial;
+        padding-left: 3%;
     }
+
 }
 /* css sidebar  */
